@@ -1,0 +1,324 @@
+.carousel-item {
+    height:90vh;
+    background: #000;
+    color: white;
+    position: relative; 
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: 60% 60%;
+    border-bottom-right-radius: 60% 60%;
+}
+
+.container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 0 10% 5%;
+}
+
+.container p{
+    padding: 0 10% 0 0%;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-image{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    border-top-right-radius: 60% 60%;
+    border-bottom-right-radius: 60% 60%;
+}
+
+.move-left{
+    padding-right: 15%;
+}
+
+.right-col{
+    position:relative;
+    height:90vh;
+}
+
+.rspace{
+    position: relative;
+    height: 40%;
+}
+
+.rspace-2{
+    position: relative;
+    height: 60%;
+}
+
+.logo-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-img{
+    display: flex;
+    height:100%;
+    width: 100%;
+    object-fit: contain;    
+}
+
+.section-1{
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-1 p{
+    font-size: 75px;
+    font-weight: 700;
+    color: #102447;
+    width: 90%;
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: #688992 !important;
+    border-color: #688992 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+} 
+
+.btn-primary:hover, .btn-primary:active{
+    background-color:#4f676d !important;
+    border-color: #4f676d !important;
+}
+
+.slide-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(116, 25, 25); 
+}
+
+.slide-content{
+    margin: 0 20% 0;
+    }
+
+.card{
+    border-radius: 25px;
+    background-color: white;
+}
+
+.card-image{
+    position: relative;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    background: white;
+    padding: 3px;
+}
+
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius:50%;
+    border: 4.5px solid #4f676d;
+}
+
+.image-content, .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+
+.image-content{
+    position: relative;
+    row-gap:5px;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #688992;
+    border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before, .overlay::after{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 0;
+    bottom: -40px;
+    background-color: #688992;
+    border-color: none;
+    z-index: 1;
+}
+
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: white;
+    border-color: none;
+}
+
+.name{
+    margin-top: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333;    
+    z-index: 2;
+}
+
+.description {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #707070;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+.button-card{
+    border:none;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #688992;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-card:hover{
+    background: #4f676d;
+}
+
+    
+// X-Small devices (portrait phones, less than 576px) .btn-primary:hover
+@media (max-width: 575.98px) { 
+    .carousel-item {
+        height:92vh;
+        background: #000;
+        color: white;
+        position: relative; 
+        background-position: center;
+        background-size: cover;
+        border-top-right-radius: 10% 10%;
+        border-bottom-right-radius: 10% 10%;
+        border-top-left-radius: 10% 10%;
+        border-bottom-left-radius: 10% 10%;
+    }    
+
+    .overlay-image{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        border-top-right-radius: 10% 10%;
+        border-bottom-right-radius: 10% 10%;
+        border-top-left-radius: 10% 10%;
+        border-bottom-left-radius: 10% 10%;
+    }   
+    .move-left{
+        padding: 0 0 0 0;
+    }   
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .carousel-item {
+        height:92vh;
+        background: #000;
+        color: white;
+        position: relative; 
+        background-position: center;
+        background-size: cover;
+        border-top-right-radius: 10% 10%;
+        border-bottom-right-radius: 10% 10%;
+        border-top-left-radius: 10% 10%;
+        border-bottom-left-radius: 10% 10%;
+    }    
+
+    .overlay-image{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        border-top-right-radius: 10% 10%;
+        border-bottom-right-radius: 10% 10%;
+        border-top-left-radius: 10% 10%;
+        border-bottom-left-radius: 10% 10%;
+    }
+    
+    .move-left{
+        padding: 0 0 0 0;
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .carousel-item {
+        height:92vh;
+        background: #000;
+        color: white;
+        position: relative; 
+        background-position: center;
+        background-size: cover;
+        border-top-right-radius: 10% 10%;
+        border-bottom-right-radius: 10% 10%;
+        border-top-left-radius: 10% 10%;
+        border-bottom-left-radius: 10% 10%;
+    }    
+
+    .overlay-image{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        border-top-right-radius: 10% 10%;
+        border-bottom-right-radius: 10% 10%;
+        border-top-left-radius: 10% 10%;
+        border-bottom-left-radius: 10% 10%;
+    }
+    
+    .move-left{
+        padding: 0 0 0 0;
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+   
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { 
+   
+}
