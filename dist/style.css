@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .carousel-item {
-  height: 90vh;
+  height: 100vh;
   background: #000;
   color: white;
   position: relative;
@@ -43,7 +43,7 @@
 
 .right-col {
   position: relative;
-  height: 90vh;
+  height: 98vh;
 }
 
 .rspace {
@@ -84,7 +84,7 @@
 .section-1 p {
   font-size: 75px;
   font-weight: 700;
-  color: #102447;
+  color: #4f676d;
   width: 90%;
   text-align: center;
 }
@@ -105,30 +105,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(116, 25, 25);
 }
 
 .slide-content {
-  margin: 0 20% 0;
+  margin: 0 15% 0;
+  overflow: hidden;
+  padding: 1px 10px 0 1px;
+  border-radius: 25px;
 }
 
 .card {
   border-radius: 25px;
   background-color: white;
+  border: 1px solid #688992;
 }
 
 .card-image {
   position: relative;
-  height: 8rem;
-  width: 8rem;
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9rem;
+  width: 9rem;
+  border-radius: 100%;
   background: white;
-  padding: 3px;
 }
 
 .card-image .card-img {
-  height: 100%;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 90%;
+  width: 90%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -208,6 +215,36 @@
   background: #4f676d;
 }
 
+.swiper-navBtn {
+  color: #688992;
+  transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+  color: #4f676d;
+}
+
+.swiper-navBtn::before, .swiper-navBtn::after {
+  font-size: 40px;
+}
+
+.swiper-button-next {
+  margin-right: 35px;
+}
+
+.swiper-button-prev {
+  margin-left: 35px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #BBCED8;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet:active {
+  background-color: #4f676d;
+}
+
 @media (max-width: 575.98px) {
   .carousel-item {
     height: 92vh;
@@ -238,6 +275,9 @@
   }
   .move-left {
     padding: 0 0 0 0;
+  }
+  .slide-content {
+    margin: 0 5% 0;
   }
 }
 @media (max-width: 767.98px) {
@@ -270,6 +310,12 @@
   }
   .move-left {
     padding: 0 0 0 0;
+  }
+  .slide-content {
+    margin: 0 10% 0 10%;
+  }
+  .swiper-navBtn {
+    display: none;
   }
 }
 @media (max-width: 991.98px) {
@@ -304,6 +350,67 @@
     padding: 0 0 0 0;
   }
 }
+@media (max-width: 1199.98px) {
+  .slide-content {
+    margin: 0 13% 0;
+  }
+  .card-image {
+    height: 8rem;
+    width: 8rem;
+  }
+  .name {
+    font-size: 1.2rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+  .button-card {
+    font-size: 1rem;
+  }
+  .swiper-button-next {
+    margin-right: 0;
+  }
+  .swiper-button-prev {
+    margin-left: 0;
+  }
+  .swiper-pagination-bullet {
+    display: none;
+  }
+}
+@media (min-width: 2500px) {
+  .card-image {
+    height: 13rem;
+    width: 13rem;
+  }
+  .logo-img {
+    height: 110%;
+    width: 110%;
+  }
+  .name {
+    font-size: 2.5rem;
+  }
+  .description {
+    font-size: 1.7rem;
+  }
+  .button-card {
+    font-size: 1.9rem;
+  }
+  .container {
+    padding: 0 0 5% 2.5%;
+  }
+  .container h1 {
+    font-size: 4rem;
+  }
+  .container p {
+    font-size: 1.7rem;
+  }
+  .container a {
+    font-size: 2rem;
+  }
+  .swiper-navBtn::before, .swiper-navBtn::after {
+    font-size: 80px;
+  }
+}
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -319,7 +426,6 @@ html {
 }
 
 body {
-  padding-top: 10vh;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }/*# sourceMappingURL=style.css.map */
