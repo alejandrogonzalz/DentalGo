@@ -1,0 +1,44 @@
+.section-1{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.prom-content{
+    width: 100%;
+    height: 100%;
+}
+
+.section-1 p{
+    position: relative;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4f676d;
+    width: 60%;
+    text-align: center;
+    z-index: 4;
+}
+
+.s1-overlay{
+    position:absolute;
+    padding: 0;
+    margin: 0;
+    height: 90%;
+    width: 90%;
+    background-color: #688992;
+    z-index: 1;
+}
+
+.s1-overlay::after, .s1-overlay::before{
+    content:'';
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    height: 90%;
+    width: 90%;
+    background-color: #BBCED8;
+    z-index: -1;
+}
