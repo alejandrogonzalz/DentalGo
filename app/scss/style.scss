@@ -10,6 +10,10 @@
     box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
 }
 
+/******************************************************/
+/*************** CAROUSEL MAIN SECTION ****************/
+/******************************************************/
+
 .carousel-item {
     height:100vh;
     background: #000;
@@ -17,8 +21,8 @@
     position: relative; 
     background-position: center;
     background-size: cover;
-    border-top-right-radius: 60% 60%;
-    border-bottom-right-radius: 60% 60%;
+    border-radius: 0 60% 60% 0;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 1);
 }
 
 .container{
@@ -30,8 +34,14 @@
 }
 
 .container p{
+    font-size: 1rem;
+    font-weight: 500;
     padding: 0 10% 0 0%;
-    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.container h1 {
+    font-size: 3rem;
+    font-weight:700;
 }
 
 .overlay-image{
@@ -44,13 +54,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.5;
-    border-top-right-radius: 60% 60%;
-    border-bottom-right-radius: 60% 60%;
+    border-radius: 0 60% 60% 0;
 }
 
 .move-left{
     padding-right: 15%;
 }
+
+
+/******************************************************/
+/************** LOGO AND CARDS SECTION ****************/
+/******************************************************/
 
 .right-col{
     position:relative;
@@ -95,7 +109,7 @@
     border-color: #4f676d !important;
 }
 
-.main-container{
+.slide-container{
     position: relative;
     display: flex;
     align-items: center;
@@ -105,7 +119,7 @@
 .slide-content{
     margin: 0 15% 0;
     overflow: hidden;
-    padding: 1px 10px 0 1px;
+    padding: 10px;
     border-radius: 25px;
     }
 
@@ -113,6 +127,8 @@
     border-radius: 25px;
     background-color: #F5F5F5;
     border: none;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+
 }
 
 .card-image{
@@ -234,7 +250,7 @@
     position: relative !important;
     background-color: #BBCED8;
     opacity: 1;
-    margin-bottom: 10px !important;
+    margin-bottom: 1px !important;
 }
 
 .swiper-pagination-bullet:active{
@@ -280,7 +296,7 @@
         margin: 0 5% 0;
     }
     
-
+ 
 }
 
 // Small devices (landscape phones, less than 768px)
@@ -326,6 +342,10 @@
         display: none;
     }
 
+    .carousel-item{
+        height:55vh;
+    }
+
 }
 
 // Medium devices (tablets, less than 992px)
@@ -361,6 +381,18 @@
     
     .move-left{
         padding: 0 0 0 0;
+    }
+
+    .rspace{
+        height: 100%;
+    }
+
+    .right-col{
+        height: 50vh;
+    }
+
+    .carousel-item{
+        height:75vh;
     }
     
 }

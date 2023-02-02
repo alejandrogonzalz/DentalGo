@@ -2,6 +2,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *::before, *::after {
@@ -18,49 +19,128 @@ body {
   font-size: 16px;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/******************************************************/
+/**************** SERVICES SECTION ********************/
+/******************************************************/
 .section-1 {
   position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0);
+}
+
+.serv-container {
+  position: relative;
+  height: 100%;
   width: 100%;
-  height: 60vh;
+  justify-items: center;
+  align-items: center;
+  margin: 5% 5% 5% 7%;
+}
+
+.serv-container h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4f676d;
+}
+
+.serv-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 230px 230px 230px;
+  gap: 1rem 2rem;
+}
+
+.services-image .services-img {
+  position: absolute;
+  height: 150px;
+  width: 230px;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+.s-name-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.serv-name {
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+}
+
+.services {
+  position: relative;
+  justify-content: center;
+  background: black;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  height: 150px;
+  width: 230px;
+  margin-top: 5%;
+}
+.services .inner {
+  background-color: #4f676d;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  -webkit-clip-path: inset(0% 0% 0% 100%);
+          clip-path: inset(0% 0% 0% 100%);
+  transition: -webkit-clip-path 0.5s ease-in-out;
+  transition: clip-path 0.5s ease-in-out;
+  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+}
+.services .inner h2 {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+.services .inner p {
+  color: white;
+}
+.services:hover .inner, .services:active .inner {
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+          clip-path: inset(0% 0% 0% 0%);
+}
+
+.services h2, .services p {
+  color: white;
+  text-align: center;
+}
+
+.shape-1 {
+  position: relative;
+  background-color: #4f676d;
+  height: 100vh;
+  width: 100%;
+  border-radius: 0 0 0 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: -10px 0 #BBCED8;
 }
 
-.prom-content {
-  width: 100%;
-  height: 100%;
-}
-
-.section-1 p {
+.inner-shape-1 h1 {
   position: relative;
   font-size: 3rem;
-  font-weight: 700;
-  color: #4f676d;
-  width: 60%;
+  font-weight: 800;
   text-align: center;
-  z-index: 4;
-}
-
-.s1-overlay {
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  height: 90%;
-  width: 90%;
-  background-color: #688992;
-  z-index: 1;
-}
-
-.s1-overlay::after, .s1-overlay::before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  bottom: -20px;
-  height: 90%;
-  width: 90%;
-  background-color: #BBCED8;
-  z-index: -1;
+  color: white;
+  padding: 0 0 0 10%;
+  text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0);
 }
 
 .divider {
@@ -72,6 +152,9 @@ body {
   box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 
+/******************************************************/
+/*************** CAROUSEL MAIN SECTION ****************/
+/******************************************************/
 .carousel-item {
   height: 100vh;
   background: #000;
@@ -79,8 +162,8 @@ body {
   position: relative;
   background-position: center;
   background-size: cover;
-  border-top-right-radius: 60% 60%;
-  border-bottom-right-radius: 60% 60%;
+  border-radius: 0 60% 60% 0;
+  text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0);
 }
 
 .container {
@@ -92,8 +175,14 @@ body {
 }
 
 .container p {
+  font-size: 1rem;
+  font-weight: 500;
   padding: 0 10% 0 0%;
-  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.container h1 {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .overlay-image {
@@ -106,14 +195,16 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.5;
-  border-top-right-radius: 60% 60%;
-  border-bottom-right-radius: 60% 60%;
+  border-radius: 0 60% 60% 0;
 }
 
 .move-left {
   padding-right: 15%;
 }
 
+/******************************************************/
+/************** LOGO AND CARDS SECTION ****************/
+/******************************************************/
 .right-col {
   position: relative;
   height: 98vh;
@@ -158,7 +249,7 @@ body {
   border-color: #4f676d !important;
 }
 
-.main-container {
+.slide-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -168,7 +259,7 @@ body {
 .slide-content {
   margin: 0 15% 0;
   overflow: hidden;
-  padding: 1px 10px 0 1px;
+  padding: 10px;
   border-radius: 25px;
 }
 
@@ -176,6 +267,7 @@ body {
   border-radius: 25px;
   background-color: #F5F5F5;
   border: none;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
 }
 
 .card-image {
@@ -298,7 +390,7 @@ body {
   position: relative !important;
   background-color: #BBCED8;
   opacity: 1;
-  margin-bottom: 10px !important;
+  margin-bottom: 1px !important;
 }
 
 .swiper-pagination-bullet:active {
@@ -377,6 +469,9 @@ body {
   .swiper-navBtn {
     display: none;
   }
+  .carousel-item {
+    height: 55vh;
+  }
 }
 @media (max-width: 991.98px) {
   .carousel-item {
@@ -408,6 +503,15 @@ body {
   }
   .move-left {
     padding: 0 0 0 0;
+  }
+  .rspace {
+    height: 100%;
+  }
+  .right-col {
+    height: 50vh;
+  }
+  .carousel-item {
+    height: 75vh;
   }
 }
 @media (max-width: 1199.98px) {
