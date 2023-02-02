@@ -12,6 +12,10 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.css" integrity="sha256-UgiyZCTZggzgafOcD2wPMh1qoD00B/GiLu9UEp+ZOAo=" crossorigin="anonymous">
 
+    <!-- Video CSS -->
+    <link href="//vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
+    
+
     <!-- CSS -->
     <link rel="stylesheet" href="dist/style.css">
 
@@ -391,11 +395,18 @@
             order-2
             nopadding">
                 <div class="video-container">
-                    <img src="app/content/img-video.png" class="img-video">
-                    <div class="play-container">
-                        <i class="bi bi-play-circle-fill"></i>
-                    </div>
-                    
+
+                    <video
+                    class="dg-video video-js vjs-16-9 vjs-big-play-centered"
+                    data-setup="{}"
+                    controls 
+                    poster="app/content/img-video.png"
+                    id="dg-video">
+
+                        <source src="app/content/video/video-promocional.mp4" type="video/mp4">
+
+                    </video>
+
                 </div>
             </div>
             
@@ -424,6 +435,9 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.js" integrity="sha256-vCqP5HofCfq/Vp6YJRGzHXFgQbylSYcaWSDQDuE5cK0=" crossorigin="anonymous"></script>
+
+    <!-- Video JS -->
+    <script src="//vjs.zencdn.net/7.10.2/video.min.js"></script>
 
     <!-- My JS -->
     <script src="app/js/script.js"></script>

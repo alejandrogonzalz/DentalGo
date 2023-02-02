@@ -20,4 +20,9 @@ var swiper = new Swiper(".slide-content", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  })
+  });
+
+  var player = videojs("dg-video",{
+      fluid:true
+    
+  });
