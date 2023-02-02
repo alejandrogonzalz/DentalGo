@@ -3,9 +3,8 @@
 /**************** SERVICES SECTION ********************/
 /******************************************************/
 
-
 .section-1{
-    position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -18,14 +17,15 @@
     width: 100%;
     justify-items: center;
     align-items: center;
-    margin: 5% 5% 5% 7%;
+    padding: 5%;
 }
 
 
 .serv-container h1 {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #4f676d;
+    color: #431B51;
+    text-shadow: -1px -1px 1px rgba(146, 142, 180, 1);
 }
 
 .serv-wrapper {
@@ -41,7 +41,7 @@
     height: 150px;
     width: 230px;
     border-radius: 10px;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .s-name-container{
@@ -57,21 +57,20 @@
     font-size: 1.5rem;
     text-align: center;
     color: white;
-    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .services {
     position: relative;
     justify-content: center;
-    background: black;
+    background: #431B51;
     box-shadow: 1px 5px 15px rgba(0,0,0,0.8);
     border-radius: 10px;
     height: 150px;
     width: 230px;
     margin-top: 5%;
     .inner{
-        background-color: #4f676d;
+        background-color: #431B51;
         border-radius: 10px;
         height: 100%;
         width: 100%;
@@ -103,14 +102,14 @@
 
 .shape-1{
     position: relative;
-    background-color: #4f676d;
+    background-color: #431B51;
     height: 100vh;
     width: 100%;
     border-radius: 0 0 0 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: -10px 0 #BBCED8;
+    box-shadow: -10px 0 #928EB4;
 }
 
 .inner-shape-1 h1{
@@ -121,5 +120,34 @@
     color: white;
     padding: 0 0 0 10%;
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 1);
-
 }
+
+
+.video-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 10%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img-video {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.play-container i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    font-size: 4em;
+    color: #431B51;
+}
+
