@@ -67,6 +67,11 @@ img {
   justify-content: center;
 }
 
+.services h2, .services p {
+  color: white;
+  text-align: center;
+}
+
 .serv-name {
   font-size: 1.5rem;
   text-align: center;
@@ -108,11 +113,6 @@ img {
   border-radius: 10px;
   opacity: 0.9;
   z-index: 0;
-}
-
-.services h2, .services p {
-  color: white;
-  text-align: center;
 }
 
 .shape-1 {
