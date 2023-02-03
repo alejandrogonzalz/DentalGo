@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   font-size: 100%;
@@ -25,6 +26,100 @@ img {
 }
 
 /******************************************************/
+/****************** VIDEO SECTION *********************/
+/******************************************************/
+.section-0 {
+  position: relative;
+  width: 100%;
+  background: #688992;
+}
+
+.circle-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: relative;
+  margin: auto;
+  background: #4f676d;
+  width: 60%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 0 #BBCED8;
+}
+
+.circle::before {
+  content: "“";
+  color: #ccc;
+  font-family: sans-serif, serif;
+  font-size: 20rem;
+  line-height: 1;
+  opacity: 0.9;
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  z-index: 1;
+}
+
+.circle-txt h1 {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0);
+}
+
+.video-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 5%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dg-video {
+  border: none;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.dg-video .vjs-control-bar {
+  background: white;
+  color: #4f676d;
+}
+
+.dg-video .vjs-play-progress, .dg-video .vjs-volume-level {
+  background: #BBCED8;
+}
+
+.dg-video .vjs-big-play-button {
+  background: rgb(79, 103, 109);
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border-radius: 100%;
+  border: none;
+}
+
+.dg-video .vjs-big-play-button:hover {
+  background: rgb(79, 103, 109);
+}
+
+.video-js:hover .vjs-big-play-button {
+  background: rgba(79, 103, 109, 0.7);
+}
+
+/******************************************************/
 /**************** SERVICES SECTION ********************/
 /******************************************************/
 .section-1 {
@@ -38,15 +133,20 @@ img {
 }
 
 .service-container {
+  margin: 2.5% 0 2.5% 0;
   position: relative;
-  height: 100%;
-  width: 100%;
-  justify-items: center;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin: 2% 15% 2%;
 }
 
-.service-container h1 {
+.service-title {
+  margin: 0 10% 0 0;
+}
+
+.service-title h1 {
   font-size: 2.5rem;
   font-weight: 800;
   color: white;
@@ -57,8 +157,8 @@ img {
 .service-grid {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }
 
 .service-wrapper {
@@ -105,16 +205,16 @@ img {
   background-color: white;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  height: 12rem;
-  width: 18rem;
+  height: 100%;
+  width: 100%;
   margin-top: 5%;
 }
 .services .inner {
   background-color: black;
   z-index: -1;
   border-radius: 10px;
-  height: 100%;
-  width: 100%;
+  height: inherit;
+  width: inherit;
   -webkit-clip-path: inset(0% 0% 0% 100%);
           clip-path: inset(0% 0% 0% 100%);
   transition: -webkit-clip-path 0.5s ease-in-out;
@@ -126,81 +226,47 @@ img {
           clip-path: inset(0% 0% 0% 0%);
 }
 
+.services-image {
+  height: 100%;
+  width: 100%;
+}
+
 .services-image .services-img {
   position: relative;
-  height: 12rem;
-  width: 18rem;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
   opacity: 0.9;
   z-index: 0;
 }
 
-.shape-1 {
-  position: relative;
-  background-color: #688992;
-  height: 100vh;
+/******************************************************/
+/************ DIVIDER - VIDEO & CAROUSEL***************/
+/******************************************************/
+.shape-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  border-radius: 0 90% 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: -10px 0 #BBCED8;
-}
-
-.inner-shape-1 h1 {
-  position: relative;
-  font-size: 3rem;
-  font-weight: 800;
-  text-align: center;
-  color: white;
-  padding: 0 10% 0 10%;
-  text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0);
-}
-
-.video-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  padding: 5%;
-  border-radius: 10px;
   overflow: hidden;
+  line-height: 0;
 }
 
-.dg-video {
-  border: none;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
-  font-family: "Montserrat", sans-serif !important;
+.shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 650px;
+  transform: rotateY(180deg);
 }
 
-.dg-video .vjs-control-bar {
-  background: white;
-  color: #4f676d;
+.shape-divider-top .shape-fill {
+  fill: #FFFFFF;
 }
 
-.dg-video .vjs-play-progress, .dg-video .vjs-volume-level {
-  background: #BBCED8;
-}
-
-.dg-video .vjs-big-play-button {
-  background: rgb(79, 103, 109);
-  width: 3.5rem;
-  height: 3.5rem;
-  line-height: 3.5rem;
-  border-radius: 100%;
-  border: none;
-}
-
-.dg-video .vjs-big-play-button:hover {
-  background: rgb(79, 103, 109);
-}
-
-.video-js:hover .vjs-big-play-button {
-  background: rgba(79, 103, 109, 0.4);
-}
-
+/******************************************************/
+/************ DIVIDER - VIDEO & CAROUSEL***************/
+/******************************************************/
 .divider {
   width: 100%;
   height: 3rem;
