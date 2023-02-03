@@ -31,30 +31,40 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 
-.serv-container {
+.service-container {
   position: relative;
   height: 100%;
   width: 100%;
   justify-items: center;
   align-items: center;
-  padding: 5%;
+  margin: 2% 15% 2%;
 }
 
-.serv-container h1 {
+.service-container h1 {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #688992;
+  color: white;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);
+  text-align: center;
 }
 
-.serv-wrapper {
+.service-grid {
   position: relative;
   display: grid;
-  grid-template-columns: 230px 230px 230px;
-  gap: 1rem 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.service-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .info-container {
@@ -68,25 +78,35 @@ img {
 }
 
 .services h2, .services p {
-  color: white;
+  color: black;
   text-align: center;
 }
 
 .serv-name {
   font-size: 1.5rem;
   text-align: center;
-  color: white;
+  color: black;
   opacity: 0.9;
+}
+
+.icon-content, .info-content {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.info-content {
+  position: relative;
 }
 
 .services {
   position: relative;
   justify-content: center;
-  background-color: #4f676d;
+  background-color: white;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  height: 150px;
-  width: 230px;
+  height: 12rem;
+  width: 18rem;
   margin-top: 5%;
 }
 .services .inner {
@@ -108,8 +128,8 @@ img {
 
 .services-image .services-img {
   position: relative;
-  height: 150px;
-  width: 230px;
+  height: 12rem;
+  width: 18rem;
   border-radius: 10px;
   opacity: 0.9;
   z-index: 0;
@@ -120,7 +140,7 @@ img {
   background-color: #688992;
   height: 100vh;
   width: 100%;
-  border-radius: 0 0 0 90%;
+  border-radius: 0 90% 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,7 +153,7 @@ img {
   font-weight: 800;
   text-align: center;
   color: white;
-  padding: 0 0 0 10%;
+  padding: 0 10% 0 10%;
   text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0);
 }
 
