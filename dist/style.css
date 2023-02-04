@@ -510,17 +510,6 @@ img {
   margin-left: 35px;
 }
 
-.swiper-pagination-bullet {
-  position: relative !important;
-  background-color: #BBCED8;
-  opacity: 1;
-  margin-bottom: 1px !important;
-}
-
-.swiper-pagination-bullet:active {
-  background-color: #4f676d;
-}
-
 @media (max-width: 575.98px) {
   .carousel-item {
     height: 92vh;
