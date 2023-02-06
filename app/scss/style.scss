@@ -250,7 +250,7 @@
 
 
     
-// X-Small devices (portrait phones, less than 576px) .btn-primary:hover
+// X-Small devices (portrait phones, less than 576px) 
 @media (max-width: 575.98px) { 
     .carousel-item {
         height:92vh;
@@ -281,12 +281,31 @@
         border-bottom-left-radius: 10% 10%;
     }   
     .move-left{
-        padding: 0 0 0 0;
+        padding:0;
     }  
 
     .slide-content{
         margin: 0 5% 0;
     }
+
+    .container {
+        padding: 0 15% 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container p {
+        font-size: 0.5rem;
+        padding: 0;
+        text-align: justify;
+    }
+
+    .container h1{
+        text-align: center;
+        font-size: 1rem;
+    }   
     
  
 }
@@ -335,7 +354,26 @@
     }
 
     .carousel-item{
-        height:55vh;
+        height:25vh;
+    }
+
+    .container {
+        padding: 0 15% 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container p {
+        font-size: 1rem;
+        padding: 0;
+        text-align: justify;
+    }
+
+    .container h1{
+        text-align: center;
+        font-size: 2rem;
     }
 
 }
@@ -372,7 +410,7 @@
     }
     
     .move-left{
-        padding: 0 0 0 0;
+        padding: 0;
     }
 
     .rspace{
@@ -384,9 +422,34 @@
     }
 
     .carousel-item{
-        height:75vh;
+        height:100vh;
     }
     
+    .slide-container{
+        height: 80vh;
+    }
+
+    .container {
+        padding: 0 0 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container p {
+        font-size: 1.2rem;
+        padding: 0;
+        text-align: justify;
+    }
+
+    .container h1{
+        text-align: center;
+        font-size: 2.3rem;
+    }
+
+
+
 }
 
 // Large devices (desktops, less than 1200px)

@@ -3,45 +3,13 @@
 /******************************************************/
 
 .shape-divider {
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.shape-divider-top {
+    background: #688992;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+    top:0;
+    height: 100%;
+    clip-path: polygon(0 86%, 100% 0, 100% 100%, 0% 100%);
 }
 
-.shape-divider-top svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 650px;
-    transform: rotateY(180deg);
-}
-
-.shape-divider-top .shape-fill {
-    fill: #FFFFFF;
-}
 
 /******************************************************/
 /************ DIVIDER - VIDEO & CAROUSEL***************/

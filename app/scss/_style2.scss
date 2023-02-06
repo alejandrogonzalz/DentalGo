@@ -5,7 +5,7 @@
 .section-0{
     position: relative;
     width: 100%;
-    background: #688992;
+    background: white;
 }
 
 .circle-container{
@@ -45,17 +45,18 @@
 .circle-txt h1{
     color: white;
     font-weight: 700;
+    font-size: 2.5rem;
     text-align: center;
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 1);
 }
 
 .video-container {
     position: relative;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
     padding: 5%;
     border-radius: 10px;
     overflow: hidden;
@@ -232,8 +233,7 @@
 
 
 }
-
-    // Small devices (landscape phones, less than 768px)
+// Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
 
 
@@ -242,12 +242,28 @@
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { 
 
+    .circle-container{
+        height: 100vh;
+    }
+
+    .video-container{
+        height: 100vh;
+
+    }
 
 }
 
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) { 
+    .circle::before{
+        font-size: 16rem;
+    }
+
+    .circle-txt h1{
+        font-size: 1.45rem;
+    }
+
 
 }
 
