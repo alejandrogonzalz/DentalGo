@@ -1,6 +1,6 @@
 @import"global";
 @import "style2";
-@import "style2";
+@import "style3";
 @import "dividers";
 
 .divider {
@@ -63,6 +63,11 @@
     padding-right: 15%;
 }
 
+.carousel .carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+ }
 
 /******************************************************/
 /************** LOGO AND CARDS SECTION ****************/
