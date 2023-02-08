@@ -40,6 +40,7 @@ img {
   width: 100%;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .circle {
@@ -86,6 +87,7 @@ img {
   padding: 5%;
   border-radius: 10px;
   overflow: hidden;
+  z-index: 10;
 }
 
 .dg-video {
@@ -124,6 +126,7 @@ img {
 /**************** SERVICES SECTION ********************/
 /******************************************************/
 .section-1 {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,10 +134,11 @@ img {
   border: solid rgba(0, 0, 0, 0.15);
   border-width: 1px 0;
   box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+  z-index: 0;
 }
 
 .service-container {
-  margin: 2.5% 0 2.5% 0;
+  margin: 5% 0;
   position: relative;
   width: 80%;
   display: flex;
@@ -144,13 +148,13 @@ img {
 }
 
 .service-title {
-  margin: 0 10% 0 0;
+  margin: 0 5% 0;
 }
 
 .service-title h1 {
   font-size: 2.5rem;
-  font-weight: 800;
-  color: white;
+  font-weight: 600;
+  color: black;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);
   text-align: center;
 }
@@ -168,36 +172,48 @@ img {
   align-items: center;
 }
 
+.services h2, .services p {
+  color: black;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .info-container {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-}
-
-.services h2, .services p {
-  color: black;
-  text-align: center;
-}
-
-.serv-name {
-  font-size: 1.5rem;
-  text-align: center;
-  color: black;
-  opacity: 0.9;
 }
 
 .icon-content, .info-content {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
 }
 
-.info-content {
+.icon-image {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.7rem;
+  aspect-ratio: 1;
+}
+
+.icon-image .icon-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .services {
@@ -237,10 +253,14 @@ img {
   height: 100%;
   width: 100%;
   border-radius: 10px;
-  opacity: 0.9;
   z-index: 0;
 }
 
+@media (max-width: 767.98px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 991.98px) {
   .circle-container {
     height: 60vh;
@@ -250,6 +270,10 @@ img {
   }
   .video-container {
     height: 80vh;
+  }
+  .service-container {
+    width: 90%;
+    flex-direction: column;
   }
 }
 @media (max-width: 1199.98px) {
@@ -261,7 +285,7 @@ img {
   }
 }
 /******************************************************/
-/************ DIVIDER - VIDEO & CAROUSEL***************/
+/************ DIVIDER - CAROUSEL & VIDEO***************/
 /******************************************************/
 .shape-divider {
   background: #688992;
@@ -273,8 +297,37 @@ img {
 }
 
 /******************************************************/
-/************ DIVIDER - VIDEO & CAROUSEL***************/
+/************ DIVIDER - VIDEO & SERVICES***************/
 /******************************************************/
+.sec-1-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-1-container::before,
+.sec-1-container::after {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  width: 8%;
+  aspect-ratio: 1;
+  background: #688992;
+  top: -12%;
+}
+
+.sec-1-container::before {
+  right: 50%;
+  transform: skew(0, 20deg);
+}
+
+.sec-1-container::after {
+  left: 50%;
+  transform: skew(0, -20deg);
+}
+
 .divider {
   width: 100%;
   height: 3rem;

@@ -14,6 +14,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 .circle{
@@ -60,6 +61,7 @@
     padding: 5%;
     border-radius: 10px;
     overflow: hidden;
+    z-index: 10;
 }
 
 .dg-video{
@@ -101,6 +103,7 @@
 /******************************************************/
 
 .section-1{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,10 +111,11 @@
     border: solid rgba(0, 0, 0, .15);
     border-width: 1px 0;
     box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+    z-index: 0;
 }
 
 .service-container{
-    margin: 2.5% 0 2.5% 0;
+    margin: 5% 0;
     position: relative;
     width: 80%;
     display: flex;
@@ -121,13 +125,13 @@
 }
 
 .service-title{
-    margin: 0 10% 0 0;
+    margin: 0 5% 0;
 }
 
 .service-title h1{
     font-size: 2.5rem;
-    font-weight: 800;
-    color: white;
+    font-weight: 600;
+    color: black;
     text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);
     text-align: center;
 }
@@ -145,47 +149,47 @@
     align-items: center;
 }
 
+.services h2, .services p{
+    color: black;
+    text-align: center; 
+}
+
+.services h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 .info-container{
     position: absolute;
     height: 100%;
     width: 100%;
     top:0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-}
-
-.services h2, .services p{
-    color: black;
-    text-align: center; 
-}
-
-.serv-name{
-    font-size: 1.5rem;
-    text-align: center;
-    color: black;
-    opacity: 0.9;
 }
 
 .icon-content, .info-content{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
 }
 
-
-// .i-overlay{
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     height: 100%;
-//     width: 100%;
-//     background-color: #688992;
-//     border-radius: 25px 25px 0 25px;
-// }
-
-.info-content{
+.icon-image{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.7rem;
+    aspect-ratio: 1;    
+}
+
+.icon-image .icon-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .services {
@@ -223,7 +227,6 @@
     height: 100%;
     width: 100%;
     border-radius: 10px;
-    opacity: 0.9;
     z-index: 0;
 }
 
@@ -236,6 +239,10 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
 
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    
 
 }
 
@@ -248,15 +255,16 @@
 
     .circle{
         width: 80%;
-
     }
 
     .video-container{
         height: 80vh;
-
     }
 
-    
+    .service-container{
+        width: 90%;
+        flex-direction: column;
+    }
 
 }
 
