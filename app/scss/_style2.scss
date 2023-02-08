@@ -27,7 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 10px 0 #BBCED8;
+    box-shadow: 10px 0 #BBCED8;    
 }
 
 .circle::before{
@@ -130,9 +130,9 @@
 
 .service-title h1{
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 700;
     color: black;
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);
+    text-shadow: -1px -1px 1px rgba(134, 134, 134, 0.8);
     text-align: center;
 }
 
@@ -183,7 +183,7 @@
     justify-content: center;
     align-items: center;
     height: 3.7rem;
-    aspect-ratio: 1;    
+    aspect-ratio: 1; 
 }
 
 .icon-image .icon-img{
@@ -207,13 +207,13 @@
         border-radius: 10px;
         height: inherit;
         width: inherit;
-        clip-path: inset(0% 0% 0% 100%);
-        transition: clip-path .5s ease-in-out;
+        clip-path: circle(0% at 50% 20%);
+        transition: clip-path .6s ease-in-out;
         
     }
 
     &:hover .inner, &:active .inner{
-        clip-path: inset(0% 0% 0% 0%);
+        clip-path: circle(80%);
     }
 }
 

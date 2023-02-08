@@ -153,9 +153,9 @@ img {
 
 .service-title h1 {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: black;
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);
+  text-shadow: -1px -1px 1px rgba(134, 134, 134, 0.8);
   text-align: center;
 }
 
@@ -232,15 +232,274 @@ img {
   border-radius: 10px;
   height: inherit;
   width: inherit;
-  -webkit-clip-path: inset(0% 0% 0% 100%);
-          clip-path: inset(0% 0% 0% 100%);
-  transition: -webkit-clip-path 0.5s ease-in-out;
-  transition: clip-path 0.5s ease-in-out;
-  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+  -webkit-clip-path: circle(0% at 50% 20%);
+          clip-path: circle(0% at 50% 20%);
+  transition: -webkit-clip-path 0.6s ease-in-out;
+  transition: clip-path 0.6s ease-in-out;
+  transition: clip-path 0.6s ease-in-out, -webkit-clip-path 0.6s ease-in-out;
 }
 .services:hover .inner, .services:active .inner {
-  -webkit-clip-path: inset(0% 0% 0% 0%);
-          clip-path: inset(0% 0% 0% 0%);
+  -webkit-clip-path: circle(80%);
+          clip-path: circle(80%);
+}
+
+.services-image {
+  height: 100%;
+  width: 100%;
+}
+
+.services-image .services-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+@media (max-width: 767.98px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 991.98px) {
+  .circle-container {
+    height: 60vh;
+  }
+  .circle {
+    width: 80%;
+  }
+  .video-container {
+    height: 80vh;
+  }
+  .service-container {
+    width: 90%;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1199.98px) {
+  .circle::before {
+    font-size: 16rem;
+  }
+  .circle-txt h1 {
+    font-size: 1.45rem;
+  }
+}
+/******************************************************/
+/****************** VIDEO SECTION *********************/
+/******************************************************/
+.section-0 {
+  position: relative;
+  width: 100%;
+  background: white;
+}
+
+.circle-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.circle {
+  position: relative;
+  margin: auto;
+  background: #4f676d;
+  width: 60%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 0 #BBCED8;
+}
+
+.circle::before {
+  content: "“";
+  color: #ccc;
+  font-family: sans-serif, serif;
+  font-size: 20rem;
+  line-height: 1;
+  opacity: 0.9;
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  z-index: 1;
+}
+
+.circle-txt h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0);
+}
+
+.video-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5%;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.dg-video {
+  border: none;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.6);
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.dg-video .vjs-control-bar {
+  background: white;
+  color: #4f676d;
+}
+
+.dg-video .vjs-play-progress, .dg-video .vjs-volume-level {
+  background: #BBCED8;
+}
+
+.dg-video .vjs-big-play-button {
+  background: rgb(79, 103, 109);
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border-radius: 100%;
+  border: none;
+}
+
+.dg-video .vjs-big-play-button:hover {
+  background: rgb(79, 103, 109);
+}
+
+.video-js:hover .vjs-big-play-button {
+  background: rgba(79, 103, 109, 0.7);
+}
+
+/******************************************************/
+/**************** SERVICES SECTION ********************/
+/******************************************************/
+.section-1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+
+.service-container {
+  margin: 5% 0;
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-title {
+  margin: 0 5% 0;
+}
+
+.service-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+  text-shadow: -1px -1px 1px rgba(134, 134, 134, 0.8);
+  text-align: center;
+}
+
+.service-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.service-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services h2, .services p {
+  color: black;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.info-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon-content, .info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.icon-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.7rem;
+  aspect-ratio: 1;
+}
+
+.icon-image .icon-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.services {
+  position: relative;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  margin-top: 5%;
+}
+.services .inner {
+  background-color: black;
+  z-index: -1;
+  border-radius: 10px;
+  height: inherit;
+  width: inherit;
+  -webkit-clip-path: circle(0% at 50% 20%);
+          clip-path: circle(0% at 50% 20%);
+  transition: -webkit-clip-path 0.6s ease-in-out;
+  transition: clip-path 0.6s ease-in-out;
+  transition: clip-path 0.6s ease-in-out, -webkit-clip-path 0.6s ease-in-out;
+}
+.services:hover .inner, .services:active .inner {
+  -webkit-clip-path: circle(80%);
+          clip-path: circle(80%);
 }
 
 .services-image {
