@@ -1,5 +1,6 @@
 console.log('Hello everybody'); 
 
+
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 1,
     spaceBetween: 50,
