@@ -36,12 +36,12 @@
 }
 
 .sec-1-container::before{
-    right: 50%;
+    right: 51%;
     transform: skew(0, 20deg);
 }
 
 .sec-1-container::after{
-    left: 50%;
+    left: 49%;
     transform: skew(0, -20deg);
 }
 
