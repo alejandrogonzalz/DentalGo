@@ -50,7 +50,7 @@ ul {
 .circle {
   position: relative;
   margin: auto;
-  background: #4f676d;
+  background: linear-gradient(to right, #4f676d, #688992);
   width: 60%;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -124,11 +124,6 @@ ul {
 
 .video-js:hover .vjs-big-play-button {
   background: rgba(79, 103, 109, 0.7);
-}
-
-.video {
-  -o-object-fit: inherit;
-     object-fit: inherit;
 }
 
 /******************************************************/
@@ -321,7 +316,7 @@ ul {
 /************ DIVIDER - CAROUSEL & VIDEO***************/
 /******************************************************/
 .shape-divider {
-  background: #688992;
+  background: linear-gradient(to right, #4f676d, #688992);
   position: absolute;
   top: 0;
   height: 100%;
@@ -341,27 +336,6 @@ ul {
   align-items: center;
 }
 
-.sec-1-container::before,
-.sec-1-container::after {
-  z-index: 1;
-  position: absolute;
-  content: "";
-  width: 8%;
-  aspect-ratio: 1;
-  background: #688992;
-  top: -12%;
-}
-
-.sec-1-container::before {
-  right: 51%;
-  transform: skew(0, 20deg);
-}
-
-.sec-1-container::after {
-  left: 49%;
-  transform: skew(0, -20deg);
-}
-
 /******************************************************/
 /******************** FOOTER **************************/
 /******************************************************/
@@ -369,23 +343,20 @@ footer {
   width: 100%;
   background: linear-gradient(to right, #4f676d, #688992);
   padding: 100px 0 30px;
-  border-radius: 125px 0 0 0;
+  border-radius: 130px 0 0 0;
   font-size: 13px;
   line-height: 20px;
   color: white;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .section-footer {
-  width: 85%;
+  width: 90%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
@@ -393,7 +364,6 @@ footer {
   position: relative;
   display: flex;
   text-align: center;
-  justify-content: center;
   align-items: center;
   height: auto;
   width: 100%;
@@ -402,7 +372,7 @@ footer {
 
 .logo-img-footer {
   height: auto;
-  width: 60%;
+  width: 300px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -491,6 +461,58 @@ form .submit {
   cursor: pointer;
 }
 
+footer hr {
+  margin: 20px auto;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.underline {
+  width: 100%;
+  height: 5px;
+  background: white;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #4f676d;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.col:nth-child(2), .col:nth-child(3) {
+  flex-basis: 15%;
+}
+
+@media (max-width: 700px) {
+  footer {
+    bottom: unset;
+  }
+}
 .divider {
   width: 100%;
   height: 3rem;
@@ -525,7 +547,7 @@ form .submit {
 .container p {
   font-size: 1.15rem;
   font-weight: 500;
-  padding: 0 10% 0 0%;
+  padding: 0 13% 0 0%;
 }
 
 .container h1 {
@@ -574,6 +596,15 @@ form .submit {
   height: 60%;
 }
 
+.slide-container-main {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo-container {
   display: flex;
   text-align: center;
@@ -585,8 +616,9 @@ form .submit {
 
 .logo-container .logo-img {
   display: flex;
-  height: 90%;
+  padding: 7% 1% 1% 1%;
   width: 100%;
+  aspect-ratio: 1;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -664,7 +696,7 @@ form .submit {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #688992;
+  background: linear-gradient(to right, #4f676d, #688992);
   border-radius: 25px 25px 0 25px;
 }
 

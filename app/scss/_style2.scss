@@ -20,7 +20,8 @@
 .circle{
     position: relative;
     margin: auto;
-    background: #4f676d;
+    // background: #4f676d;
+    background: linear-gradient(to right, #4f676d, #688992);
     width: 60%;
     aspect-ratio: 1/1;
     border-radius: 50%;

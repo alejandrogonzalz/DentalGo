@@ -39,7 +39,7 @@
 .container p{
     font-size: 1.15rem;
     font-weight: 500;
-    padding: 0 10% 0 0%;
+    padding: 0 13% 0 0%;
 }
 
 .container h1 {
@@ -89,6 +89,15 @@
     height: 60%;
 }
 
+.slide-container-main{
+    height: 100%;
+    width: 100%;
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo-container{
     display: flex;
     text-align: center;
@@ -100,8 +109,9 @@
 
 .logo-container .logo-img{
     display: flex;
-    height:90%;
+    padding: 7% 1% 1% 1%;
     width:100%;
+    aspect-ratio: 1;
     object-fit: contain;    
 }
 
@@ -178,7 +188,8 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #688992;
+    // background-color: #688992;
+    background: linear-gradient(to right, #4f676d, #688992);
     border-radius: 25px 25px 0 25px;
 }
 

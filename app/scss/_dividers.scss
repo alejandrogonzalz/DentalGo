@@ -3,7 +3,8 @@
 /******************************************************/
 
 .shape-divider {
-    background: #688992;
+    // background: #688992;
+    background: linear-gradient(to right, #4f676d, #688992);
     position: absolute;
     top:0;
     height: 100%;
@@ -24,26 +25,26 @@
     align-items: center;
 }
 
-.sec-1-container::before,
-.sec-1-container::after{
-    z-index: 1;
-    position: absolute;
-    content: '';
-    width: 8%;
-    aspect-ratio: 1;
-    background: #688992;
-    top:-12%;
-}
+// .sec-1-container::before,
+// .sec-1-container::after{
+//     z-index: 1;
+//     position: absolute;
+//     content: '';
+//     width: 8%;
+//     aspect-ratio: 1;
+//     background: #688992;
+//     top:-12%;
+// }
 
-.sec-1-container::before{
-    right: 51%;
-    transform: skew(0, 20deg);
-}
+// .sec-1-container::before{
+//     right: 51%;
+//     transform: skew(0, 20deg);
+// }
 
-.sec-1-container::after{
-    left: 49%;
-    transform: skew(0, -20deg);
-}
+// .sec-1-container::after{
+//     left: 49%;
+//     transform: skew(0, -20deg);
+// }
 
     
 
