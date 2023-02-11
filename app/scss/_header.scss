@@ -1,0 +1,58 @@
+/******************************************************/
+/******************** HEADER **************************/
+/******************************************************/
+
+// ====== SIDEBAR ======
+.sidebar{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: linear-gradient(white, #4f676d);
+}
+
+.sidebar header{
+    position: relative;
+}
+
+.sidebar header .logo-header-container{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .logo-header-container .logo-tooth{
+    width: 60px;
+}
+
+.sidebar header .logo-header-container .logo-text{
+    height: 50px;
+    padding-left: 8px;
+}
+// ====== SIDEBAR ======
+
+// ====== Reusable CSS ======
+.sidebar header .image-l{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    display: flex;
+    background: #4f676d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 25px;
+}
