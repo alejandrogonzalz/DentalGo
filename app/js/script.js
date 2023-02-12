@@ -1,5 +1,6 @@
 console.log('Hello everybody'); 
 
+// === SWIPER ===
 
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 1,
@@ -23,7 +24,22 @@ var swiper = new Swiper(".slide-content", {
     },
   });
 
+
+// === VIDEO ===
   var player = videojs("dg-video",{
       fluid:true
     
   });
+
+// === SIDEBAR ===
+  const body = document.querySelector('body'),
+  sidebar = body.querySelector('nav'),
+  toggle = body.querySelector(".toggle");
+
+  toggle.addEventListener("click" , () =>{
+  sidebar.classList.toggle("close");
+  })
+
+  searchBtn.addEventListener("click" , () =>{
+  sidebar.classList.remove("close");
+  })
