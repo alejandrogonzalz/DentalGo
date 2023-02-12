@@ -208,13 +208,13 @@
         border-radius: 10px;
         height: inherit;
         width: inherit;
-        clip-path: circle(0% at 50% 20%);
+        clip-path: inset(0% 0% 0% 100%);
         transition: clip-path .6s ease-in-out;
         
     }
 
     &:hover .inner, &:active .inner{
-        clip-path: circle(80%);
+        clip-path: inset(0% 0% 0% 0%);
     }
 }
 

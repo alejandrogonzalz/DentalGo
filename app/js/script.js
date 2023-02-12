@@ -31,7 +31,7 @@ var swiper = new Swiper(".slide-content", {
     
   });
 
-// === SIDEBAR ===
+// === SIDEBAR CLOSE ===
   const body = document.querySelector('body'),
   sidebar = body.querySelector('nav'),
   toggle = body.querySelector(".toggle");
