@@ -87,7 +87,7 @@ form a{
     color: white;
 }
 
-form input{
+#newsletter input{
     width: 100%;
     background: transparent;
     color: white;
@@ -96,7 +96,7 @@ form input{
     padding: 0 10px 0;
 }
 
-::placeholder{
+#newsletter ::placeholder{
     color: white;
 }
 
@@ -111,11 +111,13 @@ form .submit{
 .social-icons{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .social-icons .bi{
     line-height: 40px;
     font-size: 25px;
+    min-width: 40px;
     cursor: pointer;
 }
 

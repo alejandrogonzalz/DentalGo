@@ -23,33 +23,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
-// .sec-1-container::before,
-// .sec-1-container::after{
-//     z-index: 1;
-//     position: absolute;
-//     content: '';
-//     width: 8%;
-//     aspect-ratio: 1;
-//     background: #688992;
-//     top:-12%;
-// }
+/******************************************************/
+/************ DIVIDER - MAP - CONTAINER***************/
+/******************************************************/
 
-// .sec-1-container::before{
-//     right: 51%;
-//     transform: skew(0, 20deg);
-// }
-
-// .sec-1-container::after{
-//     left: 49%;
-//     transform: skew(0, -20deg);
-// }
-
-    
+.triangle{ 
+    background: #4f676d;
+    position: absolute;
+    top:0;
+    height: 100%;
+    // clip-path: ellipse(57% 40% at 50% 15%);
+    clip-path: polygon(10% 50%, 0 0, 0 100%);
+}
 
 
-
+.triangle-2{ 
+    background: #688992;
+    position: absolute;
+    top:0;
+    height: 100%;
+    // clip-path: ellipse(57% 40% at 50% 15%);
+    clip-path: polygon(90% 50%, 100% 0, 100% 100%);
+}
 
 
 

@@ -117,15 +117,15 @@
 }
 
 .btn-primary{
-    background-color: #688992 !important;
-    border-color: #688992 !important;
+    background-color: var(--main) !important;
+    border-color: var(--main) !important;
     cursor: pointer !important;
     transition: all 0.3s ease !important;
 } 
 
 .btn-primary:hover, .btn-primary:active{
-    background-color:#4f676d !important;
-    border-color: #4f676d !important;
+    background-color: var(--dark-main) !important;
+    border-color: var(--dark-main) !important;
 }
 
 .slide-container{
@@ -144,7 +144,7 @@
 
 .card{  
     border-radius: 25px;
-    background-color: #F5F5F5;
+    background-color: var(--silver);
     border: none;
     box-shadow: 1px 1px 8px rgba(0,0,0,0.5);
 
@@ -168,7 +168,7 @@
     width: 90%;
     object-fit: cover;
     border-radius:50%;
-    border: 4.5px solid #4f676d;
+    border: 4.5px solid var(--dark-main);
 }
 
 .image-content, .card-content{
@@ -189,8 +189,7 @@
     top: 0;
     height: 100%;
     width: 100%;
-    // background-color: #688992;
-    background: linear-gradient(to right, #4f676d, #688992);
+    background: linear-gradient(to right, var(--dark-main), var(--main));
     border-radius: 25px 25px 0 25px;
 }
 
@@ -201,14 +200,14 @@
     width: 40px;
     right: 0;
     bottom: -40px;
-    background-color: #688992;
+    background-color: var(--main);
     border-color: none;
     z-index: 1;
 }
 
 .overlay::after{
     border-radius: 0 25px 0 0;
-    background-color: #F5F5F5;
+    background-color: var(--silver);
     border-color: none;
 }
 
@@ -217,14 +216,14 @@
     font-size: 1.3rem;
     font-weight: 600;
     text-align: center;
-    color: #333;    
+    color: var(--dark-grey);    
     z-index: 2;
 }
 
 .description {
     font-size: 1rem;
     font-weight: 500;
-    color: #707070;
+    color: var(--light-grey);
     text-align: center;
     margin: 0 0 8px 0;
 }
@@ -242,16 +241,16 @@
 }
 
 .button-card:hover{
-    background: #4f676d;
+    background: var(--dark-main);
 }
 
 .swiper-navBtn {
-    color: #688992;
+    color: var(--main);
     transition: color 0.3s ease;
 }
 
 .swiper-navBtn:hover {
-    color: #4f676d;
+    color: var(--dark-main);
 }
 
 .swiper-navBtn::before, .swiper-navBtn::after{
@@ -432,11 +431,6 @@
 @media (max-width: 767.98px) {
     .carousel-item {
         height:92vh;
-        background: #000;
-        color: white;
-        position: relative; 
-        background-position: center;
-        background-size: cover;
         border-top-right-radius: 10% 10%;
         border-bottom-right-radius: 10% 10%;
         border-top-left-radius: 10% 10%;

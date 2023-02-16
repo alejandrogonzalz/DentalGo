@@ -369,7 +369,6 @@
 
         <!-- START ROW SECTION-1 -->
         <div class="row section-1 nopadding">
-
            
             <div class="sec-1-container">
 
@@ -605,17 +604,65 @@
         <!-- START ROW SECTION-2 -->
         <div class="row section-2 nopadding">
 
+            
+            <!-- <div class="triangle"></div>
+            <div class="triangle-2"></div> -->
+
             	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 
                 nopadding order-1">
 
                     <div class="map-container">
+                                               
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3590.391621758347!2d-97.53650907310785!3d25.856585131442504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f9307ff8544eb%3A0x98bc29a97af80d5e!2sDentalGo!5e0!3m2!1ses!2smx!4v1675885497576!5m2!1ses!2smx"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+                        <div class="other-container">
+                            <div class="o-wrapper wrapper-left">
+                                <h3>Horarios de atención</h3>
+                                <ul>
+                                    <li>Lunes - Viernes - 9:00 am - 6:00 pm</li>
+                                    <li>Sabádo - 10:00 am - 5:00 pm</li>
+                                    <li>Domingo - Cerrado</li>
+                                </ul>
+
+                            </div>     
+                            <div class="o-wrapper wrapper-right">
+                                <h3>Números de contacto</h3>
+                                <ul>
+                                    <li>+52 868 102 1923</li>
+                                    <li>+52 868 102 1923</li>
+                                    <li>+52 868 102 1923</li>
+                                </ul>
+                            </div>  
+                                                            
+                        </div>
                     </div>
                     
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 
-                nopadding order-2">                    
+                nopadding order-2">   
+
+                    <section class="contact" id="contact">
+                        
+                        <h1 class="heading">Haz tu cita</h1>
+                        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="form-x">
+                            <span>Su nombre:</span>
+                            <input type="text" name="name" placeholder="Ingresa tu nombre" class="box">
+
+                            <span>Su correo:</span>
+                            <input type="email" name="email" placeholder="Ingresa tu correo electrónico" class="box">
+
+                            <span>Su número:</span>
+                            <input type="number" name="number" placeholder="Ingresa tu número" class="box">
+
+                            <span>Día de la cita:</span>
+                            <input type="datetime-local" name="date" class="box">
+                            <input type="submit" value="Haz tu cita" name="submit" class="link-btn">
+
+                        </form>
+                        
+                    </section>
+
                 </div>           
 
         </div> <!-- END ROW SECTION-2 -->
