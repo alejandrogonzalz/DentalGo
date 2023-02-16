@@ -337,7 +337,6 @@
         display: none;
     }
 
-    
     .container {
         padding: 0 5% 10%;
         display: flex;
@@ -346,18 +345,12 @@
         align-items: center;
     }
 
-
 }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { 
     .carousel-item {
-        height:92vh;
-        background: #000;
-        color: white;
-        position: relative; 
-        background-position: center;
-        background-size: cover;
+        height: 92vh;
         border-top-right-radius: 10% 10%;
         border-bottom-right-radius: 10% 10%;
         border-top-left-radius: 10% 10%;
@@ -365,15 +358,6 @@
     }    
 
     .overlay-image{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        opacity: 0.5;
         border-top-right-radius: 10% 10%;
         border-bottom-right-radius: 10% 10%;
         border-top-left-radius: 10% 10%;
@@ -392,12 +376,12 @@
         height: 50vh;
     }
 
-    .carousel-item{
-        height:70vh;
-    }
-    
     .slide-container{
         height: 60vh;
+    }
+
+    .swiper-navBtn{
+        display: none;
     }
 
     .container {
@@ -420,47 +404,16 @@
     }
 
     .slide-content{
-        margin: 0;
+        margin: 0 10%;
     }
-
-
 
 }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     .carousel-item {
-        height:92vh;
-        border-top-right-radius: 10% 10%;
-        border-bottom-right-radius: 10% 10%;
-        border-top-left-radius: 10% 10%;
-        border-bottom-left-radius: 10% 10%;
+        height: 80vh;
     }    
-
-    .overlay-image{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        opacity: 0.5;
-        border-top-right-radius: 10% 10%;
-        border-bottom-right-radius: 10% 10%;
-        border-top-left-radius: 10% 10%;
-        border-bottom-left-radius: 10% 10%;
-    }
-
-
-    .slide-content{
-        margin: 0 10% 0 10%;
-    }
-
-    .swiper-navBtn{
-        display: none;
-    }
 
     .container {
         padding: 0 0 10%;
@@ -484,35 +437,6 @@
 
 // X-Small devices (portrait phones, less than 576px) 
 @media (max-width: 575.98px) { 
-    .carousel-item {
-        height:92vh;
-        background: #000;
-        color: white;
-        position: relative; 
-        background-position: center;
-        background-size: cover;
-        border-top-right-radius: 10% 10%;
-        border-bottom-right-radius: 10% 10%;
-        border-top-left-radius: 10% 10%;
-        border-bottom-left-radius: 10% 10%;
-    }    
-
-    .overlay-image{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        opacity: 0.5;
-        border-top-right-radius: 10% 10%;
-        border-bottom-right-radius: 10% 10%;
-        border-top-left-radius: 10% 10%;
-        border-bottom-left-radius: 10% 10%;
-    }   
-
 
     .slide-content{
         margin: 0 5% 0;
