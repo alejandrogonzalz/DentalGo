@@ -40,6 +40,21 @@ var swiper = new Swiper(".slide-content", {
   sidebar.classList.toggle("close");
   })
 
-  searchBtn.addEventListener("click" , () =>{
-  sidebar.classList.remove("close");
-  })
+  // === SCROLL ANIMATIONS ===
+
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry)
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+
+ 
