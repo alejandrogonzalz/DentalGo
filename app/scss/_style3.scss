@@ -89,6 +89,17 @@
     flex-wrap: wrap;
 }
 
+.contact form .message{
+    width: 100%;
+    background: var(--main);
+    color: white;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
 .contact form .box{
     width: 100%;
     margin: 10px 0 20px 0;
@@ -101,13 +112,17 @@
     font-size: 1rem;
 }
 
+
 .contact form span{
     justify-content: flex-end;
     font-size: 1.15rem;
     font-weight: 500;
 }
 
+
+
 .link-btn{
+    font-size: 1.15rem;    
     background: var(--main);
     color: white;
     padding: 8px 16px;
@@ -120,7 +135,6 @@
 .link-btn:hover{
     background: var(--dark-main);
 }
-
 
 
 

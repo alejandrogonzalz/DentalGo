@@ -1,3 +1,25 @@
+<?php
+
+$conn = mysqli_connect('localhost','root', 'root', 'contact_dg') or die('connection failed');
+
+if(isset($_POST['submit'])){
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $number = $_POST['number'];
+    $date = $_POST ['date'];
+
+    $insert = mysqli_query($conn, "INSERT INTO 'contact_form' (name, email, number, date) VALUES('$name, $email, $number, $date')") or die ('query failed');
+
+    if($insert){
+        $message [] = '¡Cita realizada con éxito!';
+    } else{
+        $message [] = 'Cita fallida';
+    }
+}
+
+?>
+
+<!-- ==== HTML STARTS ==== -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,18 +70,21 @@
                             </a>
                         </li>
                         <li class="nav-link hidden">
-                            <a href="#">
-                                <i class='bx bx-list-ul icon' ></i>                                <span class="text nav-text">Servicios</span>
+                            <a href="#servicios">
+                                <i class='bx bx-list-ul icon' ></i>
+                                <span class="text nav-text">Servicios</span>
                             </a>
                         </li>
                         <li class="nav-link hidden">
                             <a href="#">
-                                <i class='bx bxs-contact icon' ></i>                                <span class="text nav-text">Contactos</span>
+                                <i class='bx bxs-contact icon' ></i>
+                                <span class="text nav-text">Contactos</span>
                             </a>
                         </li>
                         <li class="nav-link hidden">
-                            <a href="#">
-                                <i class='bx bxs-book icon'></i>                            <span class="text nav-text">Haz tu cita</span>
+                            <a href="#contact">
+                                <i class='bx bxs-book icon'></i>
+                                <span class="text nav-text">Haz tu cita</span>
                             </a>
                         </li>
                     </ul>
@@ -97,9 +122,9 @@
                         <div class="carousel-item active" data-interval="2000">
                             <div class="overlay-image" style="background-image:url(app/content/carousel/abajo-1.jpeg);"></div>
                             <div class="container">
-                                <h1>¿Quiénes somos?</h1>
-                                <p>DentalGo es un consultorio de salud bucodental comprometido con la innovación odontológica, que integra a los mejores profesionales de la salud, dedicados a brindar la mejor atención a ti y a tu familia.</p>
-                                <a href="#" class="btn btn-lg btn-primary">
+                                <h1 class="hidden">¿Quiénes somos?</h1>
+                                <p class="hidden">DentalGo es un consultorio de salud bucodental comprometido con la innovación odontológica, que integra a los mejores profesionales de la salud, dedicados a brindar la mejor atención a ti y a tu familia.</p>
+                                <a href="#contact" class="btn btn-lg btn-primary hidden">
                                     ¡Haz tu cita!
                                 </a>
                             </div>    
@@ -109,7 +134,7 @@
                             <div class="container">
                                 <h1>¿Quiénes somos?</h1>
                                 <p>DentalGo es un consultorio de salud bucodental comprometido con la innovación odontológica, que integra a los mejores profesionales de la salud, dedicados a brindar la mejor atención a ti y a tu familia.</p>
-                                <a href="#" class="btn btn-lg btn-primary">
+                                <a href="#contact" class="btn btn-lg btn-primary">
                                     ¡Haz tu cita!
                                 </a>
                             </div>
@@ -120,7 +145,7 @@
                             <div class="container">
                                 <h1>¿Quiénes somos?</h1>
                                 <p>DentalGo es un consultorio de salud bucodental comprometido con la innovación odontológica, que integra a los mejores profesionales de la salud, dedicados a brindar la mejor atención a ti y a tu familia.</p>
-                                <a href="#" class="btn btn-lg btn-primary">
+                                <a href="#contact" class="btn btn-lg btn-primary">
                                     ¡Haz tu cita!
                                 </a>
                             </div>
@@ -131,7 +156,7 @@
                             <div class="container">
                                 <h1>¿Quiénes somos?</h1>
                                 <p>DentalGo es un consultorio de salud bucodental comprometido con la innovación odontológica, que integra a los mejores profesionales de la salud, dedicados a brindar la mejor atención a ti y a tu familia.</p>
-                                <a href="#" class="btn btn-lg btn-primary">
+                                <a href="#contact" class="btn btn-lg btn-primary">
                                     ¡Haz tu cita!
                                 </a>
                             </div>
@@ -143,7 +168,7 @@
                             <div class="container">
                                 <h1>¿Quiénes somos?</h1>
                                 <p>DentalGo es un consultorio de salud bucodental comprometido con la innovación odontológica, que integra a los mejores profesionales de la salud, dedicados a brindar la mejor atención a ti y a tu familia.</p>
-                                <a href="#" class="btn btn-lg btn-primary">
+                                <a href="#contact" class="btn btn-lg btn-primary">
                                     ¡Haz tu cita!
                                 </a>
                             </div>
@@ -154,7 +179,7 @@
                             <div class="container">
                                 <h1>¿Quiénes somos?</h1>
                                 <p>DentalGo es un consultorio de salud bucodental comprometido con la innovación odontológica, que integra a los mejores profesionales de la salud, dedicados a brindar la mejor atención a ti y a tu familia.</p>
-                                <a href="#" class="btn btn-lg btn-primary">
+                                <a href="#contact" class="btn btn-lg btn-primary">
                                     ¡Haz tu cita!
                                 </a>
                             </div>
@@ -175,8 +200,6 @@
 
 
             <!-- CARD VISIBLE ONLY ON MEDIUM AND SMALL DEVICES START TAG-->
-            <!-- CARD VISIBLE ONLY ON MEDIUM AND SMALL DEVICES START TAG-->
-
             <div class="col-md-7 col-sm-12 col-12
                         order-xl-1 order-lg-1 order-md-2 order-sm-2 order-2
                         d-lg-none d-xl-none
@@ -259,20 +282,17 @@
                         </div>
                     </div>
 
-            </div>
+            </div>             <!-- CARD VISIBLE ONLY ON MEDIUM AND SMALL DEVICES END TAG-->
 
 
-
-            <!-- CARD VISIBLE ONLY ON MEDIUM AND SMALL DEVICES END TAG-->
-            <!-- CARD VISIBLE ONLY ON MEDIUM AND SMALL DEVICES END TAG -->
 
             <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 
                         order-xl-2 order-lg-2 order-md-1 order-sm-1 order-1
-                        nopadding">
+                        nopadding" id="home">
                 
                 <div class="right-col">
                     <div class="row rspace nopadding">
-                        <div class="logo-container nopadding hidden">
+                        <div class="logo-container nopadding">
                             <img src="app/content/logos/logo.png" alt="" class="logo-img">
                         </div>
                     </div>
@@ -390,7 +410,7 @@
         </div> <!-- END ROW SECTION-0 -->
 
         <!-- START ROW SECTION-1 -->
-        <div class="row section-1 nopadding">
+        <div class="row section-1 nopadding" id="servicios">
            
             <div class="sec-1-container">
 
@@ -631,7 +651,7 @@
             <div class="triangle-2"></div> -->
 
             	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 
-                nopadding order-1">
+                nopadding order-1">     
 
                     <div class="map-container">
                                                
@@ -651,8 +671,8 @@
                                 <h3>Números de contacto</h3>
                                 <ul>
                                     <li>+52 868 102 1923</li>
-                                    <li>+52 868 102 1923</li>
-                                    <li>+52 868 102 1923</li>
+                                    <li>+52 868 125 9252</li>
+                                    <li>+52 868 907 0195</li>
                                 </ul>
                             </div>  
                                                             
@@ -667,7 +687,16 @@
                     <section class="contact hidden" id="contact">
                         
                         <h1 class="heading">Haz tu cita</h1>
-                        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="form-x">
+                        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+
+                            <?php
+                                if(isset($message)){
+                                    foreach($message as $message){
+                                        echo'<p class="message">'.$message.'</p>';
+                                    }
+                                }
+                            ?>
+
                             <span>Su nombre:</span>
                             <input type="text" name="name" placeholder="Ingrese su nombre" class="box">
 
@@ -696,7 +725,7 @@
 
     <footer>
      
-        <div class="row section-footer nopadding">
+        <div class="row section-footer nopadding hidden">
 
             <div class="col">
                 <div class="logo-container-footer">
@@ -717,9 +746,9 @@
             <div class="col">
                 <h3>Links <div class="underline"><span></span></div></h3>
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Servicios</a></li>
-                    <li><a href="">Haz tu cita</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contact">Haz tu cita</a></li>
                     <li><a href="">Contactos</a></li>
                     <li><a href="">Iconos</a></li>
                 </ul>
