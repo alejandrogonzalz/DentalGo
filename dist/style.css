@@ -453,6 +453,7 @@ ul {
   height: 100%;
   width: 100%;
   margin-top: 5%;
+  overflow: hidden;
 }
 .services .inner {
   background-color: black;
@@ -485,6 +486,10 @@ ul {
 }
 
 @media (max-width: 1199.98px) {
+  .service-container {
+    width: 90%;
+    flex-direction: column;
+  }
   .circle::before {
     font-size: 16rem;
   }
@@ -503,14 +508,18 @@ ul {
     height: 80vh;
   }
   .service-container {
-    width: 90%;
+    width: 95%;
     flex-direction: column;
   }
 }
 @media (max-width: 767.98px) {
+  .service-container {
+    width: 80%;
+    flex-direction: column;
+  }
   .service-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 220px);
+    grid-template-rows: repeat(9, 320px);
   }
 }
 /******************************************************/

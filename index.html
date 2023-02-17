@@ -1,21 +1,21 @@
 <?php
 
-$conn = mysqli_connect('localhost','root', 'root', 'contact_dg') or die('connection failed');
+// $conn = mysqli_connect('localhost','root', 'root', 'contact_dg') or die('connection failed');
 
-if(isset($_POST['submit'])){
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $number = $_POST['number'];
-    $date = $_POST ['date'];
+// if(isset($_POST['submit'])){
+//     $name = mysqli_real_escape_string($conn, $_POST['name']);
+//     $email = mysqli_real_escape_string($conn, $_POST['email']);
+//     $phone = $_POST['phone'];
+//     $date = $_POST ['date'];
 
-    $insert = mysqli_query($conn, "INSERT INTO 'contact_form' (name, email, number, date) VALUES('$name, $email, $number, $date')") or die ('query failed');
+//     $insert = mysqli_query($conn, "INSERT INTO `contact_form`(`name`, `email`, `phone`, `date`) VALUES ('$name','$email','$phone','$date')") or die ('query failed');
 
-    if($insert){
-        $message [] = '¡Cita realizada con éxito!';
-    } else{
-        $message [] = 'Cita fallida';
-    }
-}
+//     if($insert){
+//         $message [] = '¡Cita realizada con éxito!';
+//     } else{
+//         $message [] = 'Cita fallida';
+//     }
+// }
 
 ?>
 
@@ -646,10 +646,6 @@ if(isset($_POST['submit'])){
         <!-- START ROW SECTION-2 -->
         <div class="row section-2 nopadding">
 
-            
-            <!-- <div class="triangle"></div>
-            <div class="triangle-2"></div> -->
-
             	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 
                 nopadding order-1">     
 
@@ -689,13 +685,13 @@ if(isset($_POST['submit'])){
                         <h1 class="heading">Haz tu cita</h1>
                         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
 
-                            <?php
+                            <!-- <?php
                                 if(isset($message)){
                                     foreach($message as $message){
                                         echo'<p class="message">'.$message.'</p>';
                                     }
                                 }
-                            ?>
+                            ?> -->
 
                             <span>Su nombre:</span>
                             <input type="text" name="name" placeholder="Ingrese su nombre" class="box">
@@ -704,7 +700,7 @@ if(isset($_POST['submit'])){
                             <input type="email" name="email" placeholder="Ingrese su correo electrónico" class="box">
 
                             <span>Su número:</span>
-                            <input type="number" name="number" placeholder="Ingrese su número" class="box">
+                            <input type="number" name="phone" placeholder="Ingrese su número" class="box">
 
                             <span>Día de la cita:</span>
                             <input type="datetime-local" name="date" class="box">

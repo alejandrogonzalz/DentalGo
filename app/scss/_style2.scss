@@ -201,6 +201,7 @@
     height: 100%;
     width: 100%;
     margin-top: 5%;
+    overflow: hidden;
     .inner{
         background-color: black;
         z-index: -1;
@@ -238,7 +239,13 @@
 
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { 
+@media (max-width: 1199.98px) {
+    
+    .service-container{
+        width: 90%;
+        flex-direction: column;
+    }
+ 
     .circle::before{
         font-size: 16rem;
     }
@@ -246,7 +253,6 @@
     .circle-txt h1{
         font-size: 1.45rem;
     }
-
 
 }
 
@@ -266,7 +272,7 @@
     }
 
     .service-container{
-        width: 90%;
+        width: 95%;
         flex-direction: column;
     }
 
@@ -275,9 +281,14 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
 
+    .service-container{
+        width: 80%;
+        flex-direction: column;
+    }
+
     .service-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(9, 220px);
+        grid-template-rows: repeat(9, 320px);
     }
     
 
