@@ -31,13 +31,32 @@ var swiper = new Swiper(".slide-content", {
   });
 
 // === SIDEBAR CLOSE ===
-  const body = document.querySelector('body'),
-  sidebar = body.querySelector('nav'),
-  toggle = body.querySelector(".toggle");
 
-  toggle.addEventListener("click" , () =>{
-  sidebar.classList.toggle("close");
-  })
+  const toggle = document.getElementById('toggle');
+  const sidebar = document.getElementById('sidebar');
+
+  document.onclick = function(e){
+    if(e.target.id !=='sidebar' && e.target.id !== 'toggle')
+    {
+      toggle.classList.remove('active');
+      sidebar.classList.remove('active')
+    }
+  }
+
+  toggle.onclick = function(){
+    toggle.classList.toggle('active');
+    sidebar.classList.toggle('active')
+  }
+
+
+  // const body = document.querySelector('body'),
+  // sidebar = body.querySelector('nav'),
+  // toggle = body.querySelector(".toggle");
+
+  // toggle.addEventListener("click" , () =>{
+  // sidebar.classList.toggle("close");})
+
+  
 
   // === SCROLL ANIMATIONS ===
 

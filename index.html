@@ -1,23 +1,4 @@
-<?php
 
-// $conn = mysqli_connect('localhost','root', 'root', 'contact_dg') or die('connection failed');
-
-// if(isset($_POST['submit'])){
-//     $name = mysqli_real_escape_string($conn, $_POST['name']);
-//     $email = mysqli_real_escape_string($conn, $_POST['email']);
-//     $phone = $_POST['phone'];
-//     $date = $_POST ['date'];
-
-//     $insert = mysqli_query($conn, "INSERT INTO `contact_form`(`name`, `email`, `phone`, `date`) VALUES ('$name','$email','$phone','$date')") or die ('query failed');
-
-//     if($insert){
-//         $message [] = '¡Cita realizada con éxito!';
-//     } else{
-//         $message [] = 'Cita fallida';
-//     }
-// }
-
-?>
 
 <!-- ==== HTML STARTS ==== -->
 <!DOCTYPE html>
@@ -45,7 +26,7 @@
 
 </head>
 <body>  
-        <nav class="sidebar close">
+        <nav class="sidebar" id="sidebar">
             <header>
                 <div class="logo-header-container hidden">
                     <span class="image-l">
@@ -58,7 +39,7 @@
                         </span>
                     </div>
                 </div>
-                <i class='bx bx-chevron-right toggle'></i>
+                <i class='bx bx-chevron-right toggle' id="toggle"></i>
             </header>
             <div class="menu-bar">
                 <div class="menu">
@@ -658,7 +639,7 @@
                                 <h3>Horarios de atención</h3>
                                 <ul>
                                     <li>Lunes - Viernes - 9:00 am - 6:00 pm</li>
-                                    <li>Sabádo - 10:00 am - 5:00 pm</li>
+                                    <li>Sabádo - 10:00 am - 5:00 pm</li>    
                                     <li>Domingo - Cerrado</li>
                                 </ul>
 

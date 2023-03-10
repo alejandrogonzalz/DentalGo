@@ -444,6 +444,10 @@
         font-size: 2rem;
     }
 
+    .logo-container .logo-img{
+        width:75%;  
+    }
+
 }
 
 // X-Small devices (portrait phones, less than 576px) 
@@ -466,5 +470,9 @@
         text-align: center;
         font-size: 2rem;
     }      
+
+    .logo-container .logo-img{
+        width:75%;  
+    }
 
 }
